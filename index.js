@@ -13,6 +13,11 @@ const message = document.querySelector('.message')
 var tur = 0
 var userWinNumber = 0
 var user2WinNumber = 0
+var b=+prompt("Şot neçədən olsun")
+if (!isNaN(b) && b !== null) {
+} else {
+  alert("Mənnən Məzələnirsən!!!!!");
+}
 function resetGame() {
   tur = 0
   userWinNumber = 0
@@ -107,7 +112,7 @@ function play(e) {
   } else {
     message.innerHTML = 'Draw'
   }
-  if (userWinNumber >= 5 || user2WinNumber >= 5) {
+  if (userWinNumber >= b || user2WinNumber >= b) {
     if (userWinNumber > user2WinNumber) {
       message.innerHTML = "User1 winnersiz";
     } else {
